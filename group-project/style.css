@@ -1,0 +1,52 @@
+/*
+Azure
+Cyan
+Spring Green
+*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+li a {
+    float: left;
+    padding: 14px 16px;
+    background-color: white;
+  }
+
+h1{
+  text-align: center;
+}
+
+h1 span{
+  background-color: azure;
+}
+
+body.main {
+  background-color: cyan !important;
+}
+
+body.sub{
+  background-color: springgreen;
+}
+
+img.right {
+  float:right;
+  display: block;
+  margin-left: auto;
+  width:500px;
+  margin-right: 50px;
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}

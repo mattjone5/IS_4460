@@ -1,0 +1,42 @@
+CREATE DATABASE IF NOT EXISTS kpopnation; # Makes our database
+
+USE kpopnation;
+CREATE TABLE IF NOT EXISTS customer (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(20) NOT NULL,
+password VARCHAR(2000) NOT NULL,
+firstName VARCHAR(20) NOT NULL,
+lastName VARCHAR(20) NOT NULL,
+birthday DATE NOT NULL,
+email VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS admin (
+id INT NOT NULL,
+username VARCHAR(20) NOT NULL,
+CONSTRAINT FK_admin_id FOREIGN KEY (id) REFERENCES customer (id)
+);
+
+CREATE TABLE IF NOT EXISTS news (
+id INT NOT NULL auto_increment PRIMARY KEY,
+groupname VARCHAR(255) NOT NULL,
+article TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS loginlogout (
+id INT NOT NULL auto_increment PRIMARY KEY,
+username VARCHAR(20) NOT NULL,
+type VARCHAR(3) NOT NULL,
+datetime DATETIME NOT NULL);
+
+CREATE TABLE IF NOT EXISTS groupsfollowing (
+id INT NOT NULL,
+bts VARCHAR(1) NOT NULL,
+blackpink VARCHAR(1) NOT NULL,
+ioi VARCHAR(1) NOT NULL,
+itzy VARCHAR(1) NOT NULL,
+ntchollywood VARCHAR(1) NOT NULL,
+nmixx VARCHAR(1) NOT NULL,
+traineea VARCHAR(1) NOT NULL,
+younite VARCHAR(1) NOT NULL,
+CONSTRAINT FK_groupsfollowing FOREIGN KEY (id) REFERENCES customer (id));

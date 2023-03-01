@@ -1,0 +1,1 @@
+FOR THE FILE loginDB.php, the username and password has been removed
